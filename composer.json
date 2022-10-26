@@ -1,0 +1,16 @@
+{
+    "name": "gutierre69/faker-data",
+    "description": "xx",
+    "autoload": {
+        "psr-4": {
+            "FakerData\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gutierre69",
+            "email": "gutierre69@gmail.com"
+        }
+    ],
+    "require": {}
+}
