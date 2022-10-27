@@ -20,3 +20,7 @@ echo $fakerData->person->complete_name."<br>";
 // echo $fakerData->content->title."<br><br>";
 // echo $fakerData->content->text;
 
+echo $fakerData->phone->country_code."<br>";
+echo $fakerData->phone->area_code."<br>";
+echo $fakerData->phone->landline."<br>";
+echo $fakerData->phone->cellphone."<br>";
