@@ -3,16 +3,18 @@ It is a more complete PHP library to generate fake data. If you need populate yo
 
 Complete user data (including the picture for male or female person), phones, address, locales, categories, enterprises, contents and the famous "blah blah blah generator".
 
-<p></p>All the data generated here doesn't really exist.<br>
-Persons, pictures, address and phones **ARE FAKE**!</p>
+All the data generated here doesn't really exist.
+
+Persons, pictures, address and phones **ARE FAKE**!
 
 ## Language Support
 pt_br: Portuguese (BRAZIL)
 
 ## Basic Usage
 
-<p>This library support PSR-4 autoloaders only.<br>
-But... is very simple!</p>
+This library support PSR-4 autoloaders only.
+
+But... is very simple!
 
 To use via composer:
 ```php
