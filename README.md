@@ -7,7 +7,7 @@ All the data generated here doesn't really exist.
 Persons, pictures, address and phones **ARE FAKE**!
 
 ## Language Support
-pt_br: Portugues (BRAZIL)
+pt_br: Portuguese (BRAZIL)
 
 ## Basic Usage
 This library support PSR-4 autoloaders only. 
