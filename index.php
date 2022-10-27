@@ -8,19 +8,21 @@ require __DIR__.'/vendor/autoload.php';
 use FakerData\Generate;
 
 
-$fakerData = new Generate();
+$FakerData = new Generate();
 
+print_r( $FakerData->phone );
 
-echo $fakerData->person->first_name."<br>";
-echo $fakerData->person->last_name."<br>";
-echo $fakerData->person->complete_name."<br>";
+// echo $FakerData->person->first_name."<br>";
+// echo $FakerData->person->last_name."<br>";
+// echo $FakerData->person->complete_name."<br>";
+// echo $FakerData->person->picture."<br>";
 
-// echo nl2br( print_r($fakerData->person, true) );
+// echo nl2br( print_r($FakerData->person, true) );
 
-// echo $fakerData->content->title."<br><br>";
-// echo $fakerData->content->text;
+// echo $FakerData->content->title."<br><br>";
+// echo $FakerData->content->text;
 
-echo $fakerData->phone->country_code."<br>";
-echo $fakerData->phone->area_code."<br>";
-echo $fakerData->phone->landline."<br>";
-echo $fakerData->phone->cellphone."<br>";
+// echo $FakerData->phone->country_code."<br>";
+// echo $FakerData->phone->area_code."<br>";
+// echo $FakerData->phone->landline."<br>";
+// echo $FakerData->phone->cellphone."<br>";
