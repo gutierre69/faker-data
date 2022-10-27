@@ -1,5 +1,5 @@
 # FakerData
-Is a more complete PHP library to generate fake data. If you need populate your data base, this is way.
+It is a more complete PHP library to generate fake data. If you need populate your data base, this is way.
 
 Complete user data (including the picture for male or female person), phones, address, locales, categories, enterprises, contents and the famous "blah blah blah generator".
 
