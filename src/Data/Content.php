@@ -23,6 +23,7 @@ class Content extends Common {
             $title[] = $this->data->lorem_words[ $this->random($this->data->lorem_words) ];
         }
         $data['title'] = ucfirst( implode(" ",$title) );
+        // -----
 
         // text lorem
         $qty            = rand(3,6);
@@ -39,26 +40,24 @@ class Content extends Common {
             $text[] = ucfirst( implode(" ",$paragraphs) ).".";
         }
         $data['text'] = implode("<br><br>",$text);
+        // -----
 
         // paragraph lorem
-        $qty            = 1;
         $text           = [];
-        for($x=0; $x<$qty; $x++){
-            $paragraphs = [];
-            for($f=0; $f<rand(10,30); $f++){
-                $sentences = [];
-                for($i=0; $i<rand(5,10); $i++){
-                    $sentences[] = $this->data->lorem_words[ $this->random($this->data->lorem_words) ];
-                }
-                $paragraphs[] = ucfirst( implode(" ",$sentences) ).". ";
+        $paragraphs = [];
+        for($f=0; $f<rand(10,30); $f++){
+            $sentences = [];
+            for($i=0; $i<rand(2,3); $i++){
+                $sentences[] = $this->data->lorem_words[ $this->random($this->data->lorem_words) ];
             }
-            $text[] = ucfirst( implode(" ",$paragraphs) ).".";
+            $paragraphs[] = ucfirst( implode(" ",$sentences) ).". ";
         }
-        $data['paragraph'] = implode("<br><br>",$text);
+        $text[] = ucfirst( implode(" ",$paragraphs) ).".";
+        $data['paragraph'] = implode(" ",$text);
+        // -----
 
         // title blah
         $data['title_blah'] = ucfirst( $this->data->blah_titles[ $this->random($this->data->blah_titles) ] );
-
         // -----
 
         // text Blah
@@ -71,7 +70,7 @@ class Content extends Common {
                 $content .= $this->data->blah_sentences[0][ $this->random($this->data->blah_sentences[0]) ];
                 $content .= $this->data->blah_sentences[1][ $this->random($this->data->blah_sentences[1]) ];
                 $content .= $this->data->blah_sentences[2][ $this->random($this->data->blah_sentences[2]) ];
-                $content .= $this->data->blah_sentences[3][ $this->random($this->data->blah_sentences[3]) ];
+                $content .= $this->data->blah_sentences[3][ $this->random($this->data->blah_sentences[3]) ]." ";
             }
             $paragraphs[] = $content;
         }
@@ -79,28 +78,27 @@ class Content extends Common {
         foreach($paragraphs AS $p){
             $text_blah .= $p."<br><br>";
         }
-        $data['text_blah'] = $text_blah;
+        $data['text_blah'] = trim($text_blah);
         // -----
 
         // paragraph Blah
         $qty                = rand(3,6);
         $text_blah          = "";
         $paragraphs         = [];
-        for($i=0; $i<$qty; $i++){
-            $content = "";
-            for($a=0; $a<5; $a++){
-                $content .= $this->data->blah_sentences[0][ $this->random($this->data->blah_sentences[0]) ];
-                $content .= $this->data->blah_sentences[1][ $this->random($this->data->blah_sentences[1]) ];
-                $content .= $this->data->blah_sentences[2][ $this->random($this->data->blah_sentences[2]) ];
-                $content .= $this->data->blah_sentences[3][ $this->random($this->data->blah_sentences[3]) ];
-            }
-            $paragraphs[] = $content;
+      
+        $content = "";
+        for($a=0; $a<5; $a++){
+            $content .= $this->data->blah_sentences[0][ $this->random($this->data->blah_sentences[0]) ];
+            $content .= $this->data->blah_sentences[1][ $this->random($this->data->blah_sentences[1]) ];
+            $content .= $this->data->blah_sentences[2][ $this->random($this->data->blah_sentences[2]) ];
+            $content .= $this->data->blah_sentences[3][ $this->random($this->data->blah_sentences[3]) ]." ";
         }
-
+        $paragraphs[] = $content;
+        
         foreach($paragraphs AS $p){
-            $text_blah .= $p."<br><br>";
+            $text_blah .= $p." ";
         }
-        $data['paragraph_blah'] = $text_blah;
+        $data['paragraph_blah'] = trim($text_blah);
         // -----
 
         return (object)  $data;
