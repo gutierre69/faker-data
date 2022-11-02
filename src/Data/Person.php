@@ -80,10 +80,7 @@ class Person extends Common {
                 $address                         = new Address();
                 $data['address']                 = $address->address;
 
-                $complete_address                = "";
-                $complete_address                .= $data['address']->street_prefix;
-                $complete_address                .= " ".$data['address']->street_name;
-                $complete_address                .= ", ".$data['address']->number;
+                $complete_address                = $data['address']->complete_address;
 
                 if(!empty($data['address']->complement))
                     $complete_address            .= ", ".$data['address']->complement;

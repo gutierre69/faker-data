@@ -14,7 +14,6 @@ class Address {
 
     public $complement              = array("","Casa", "Casa #", "Apto ##", "Bloco #@", "Bloco @", "Bloco ##", "## Andar");
 
-
-    
+    public $zipcode                 = array("#####-###");
 
 }

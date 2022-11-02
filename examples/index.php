@@ -10,10 +10,19 @@ use FakerData\Generate;
 
 $FakerData = new Generate();
 
-echo $FakerData->person->first_name."<br>";
-echo $FakerData->person->last_name."<br>";
-echo $FakerData->person->complete_name."<br>";
-echo $FakerData->person->picture."<br>";
+echo "<h4>Person</h4>";
+echo "<pre><code>". print_r( $FakerData->person, true )."</code></pre>";
+
+echo "<h4>Locale</h4>";
+echo "<pre><code>". print_r( $FakerData->locale, true )."</code></pre>";
+
+echo "<h4>Address</h4>";
+echo "<pre><code>". print_r( $FakerData->address, true )."</code></pre>";
+
+// echo $FakerData->person->first_name."<br>";
+// echo $FakerData->person->last_name."<br>";
+// echo $FakerData->person->complete_name."<br>";
+// echo $FakerData->person->picture."<br>";
 
 // echo nl2br( print_r($FakerData->person, true) );
 
