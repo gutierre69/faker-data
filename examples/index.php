@@ -6,9 +6,12 @@ ini_set('display_errors', '1');
 require '../vendor/autoload.php';
 
 use FakerData\Generate;
-
+use FakerData\Data\Person;
+use FakerData\Data\Phone;
 
 $FakerData = new Generate();
+// $person = new Person();
+// $phone = new Phone();
 
 echo "<h4>Person</h4>";
 echo "<pre><code>". print_r( $FakerData->person, true )."</code></pre>";
@@ -19,17 +22,14 @@ echo "<pre><code>". print_r( $FakerData->locale, true )."</code></pre>";
 echo "<h4>Address</h4>";
 echo "<pre><code>". print_r( $FakerData->address, true )."</code></pre>";
 
-// echo $FakerData->person->first_name."<br>";
-// echo $FakerData->person->last_name."<br>";
-// echo $FakerData->person->complete_name."<br>";
-// echo $FakerData->person->picture."<br>";
+echo "<h4>Phones</h4>";
+echo "<pre><code>". print_r( $FakerData->phone, true )."</code></pre>";
 
-// echo nl2br( print_r($FakerData->person, true) );
+echo "<h4>Category</h4>";
+echo "<pre><code>". print_r( $FakerData->category, true )."</code></pre>";
 
-// echo $FakerData->content->title."<br><br>";
-// echo $FakerData->content->text;
+echo "<h4>Content</h4>";
+echo "<pre><code>". print_r( $FakerData->content, true )."</code></pre>";
 
-// echo $FakerData->phone->country_code."<br>";
-// echo $FakerData->phone->area_code."<br>";
-// echo $FakerData->phone->landline."<br>";
-// echo $FakerData->phone->cellphone."<br>";
+echo "<h4>Email</h4>";
+echo "<pre><code>". print_r( $FakerData->email, true )."</code></pre>";

@@ -12,4 +12,8 @@ class Phone {
     public $landline    = array("3###-####");
     public $cellphone   = array("9 ####-####");
 
+    public function __construct(){
+        $this->total_area_code         = count($this->area_code) - 1;
+    }
+
 }
