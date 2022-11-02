@@ -44,22 +44,19 @@ echo $FakerData->person->first_name; // Carlos
 echo $FakerData->person->middle_name; // Alberto
 echo $FakerData->person->last_name; // de Nóbrega
 echo $FakerData->person->complete_name; // Carlos Alberto de Nóbrega
-
+echo $FakerData->person->email; // progra_couch52@terra.com.br
 echo $FakerData->person->age; // 42
 echo $FakerData->person->birthdate; // 1979-12-20
-
 echo $FakerData->person->picture; // https://fakerdata.io/images/person-pics/male/1666636504.jpg
-
-echo $FakerData->person->locale->city; // Conquista D`Oeste
-echo $FakerData->person->locale->state; // Minas Gerais
-echo $FakerData->person->locale->state_initials; // MG
-
-echo $FakerData->person->address->street_prefix; // Rua
-echo $FakerData->person->address->street_name; // Getúlio Vargas
-echo $FakerData->person->address->number; // 1160E
-echo $FakerData->person->address->complement; // Apto 53
-
-echo $FakerData->person->complete_address; // Rua Getúlio Vargas, 1160E, Apto 53, Conquista D`Oeste - MG
+echo $FakerData->person->city; // Conquista D`Oeste
+echo $FakerData->person->state; // Minas Gerais
+echo $FakerData->person->state_initials; // MG
+echo $FakerData->person->street_prefix; // Rua
+echo $FakerData->person->street_name; // Getúlio Vargas
+echo $FakerData->person->number; // 1160E
+echo $FakerData->person->complement; // Apto 53
+echo $FakerData->person->zipcode; // 97996-423
+echo $FakerData->person->complete_address; // Rua Getúlio Vargas, 1160E, Apto 53, CEP: 97996-423, Conquista D`Oeste - MG
 ```
 Many times "middlename" is empty.
 Age is a random number (18-60).
