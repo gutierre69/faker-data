@@ -4,13 +4,14 @@ namespace FakerData;
 
 use FakerData\Data\Address;
 use FakerData\Data\Category;
+use FakerData\Data\Common;
 use FakerData\Data\Content;
 use FakerData\Data\Email;
 use FakerData\Data\Locale;
 use FakerData\Data\Person;
 use FakerData\Data\Phone;
 
-class Generate {
+class Generate extends Common {
 
     public $lang = "pt_br";
 
@@ -22,6 +23,7 @@ class Generate {
     public $person;
     public $phone;
 
+    public $common;
 
     public function __construct($lang = "pt_br"){
         $address    = new Address($lang);
@@ -35,10 +37,12 @@ class Generate {
         $this->address      = $address->address;
         $this->category     = $category->category;
         $this->content      = $content->content;
-        $this->email      = $email->email;
+        $this->email        = $email->email;
         $this->locale       = $locale->locale;
         $this->person       = $person->person;
         $this->phone        = $phone->phone;
+
+       
     }
 
     public function __call($method, $attributes){
