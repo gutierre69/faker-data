@@ -8,7 +8,7 @@ class Locale extends Common {
     public $locale;
     public $data;
 
-    public function __construct($lang = "pt_br"){
+    public function __construct($lang = "en_us"){
         $data_class             = "FakerData\\Data\\$lang\\Locales"; 
         $this->data             = new $data_class;
 

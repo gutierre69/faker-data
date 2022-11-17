@@ -8,7 +8,7 @@ class Email extends Common {
     public $email;
     public $data;
 
-    public function __construct($lang = "pt_br"){
+    public function __construct($lang = "en_us"){
         $data_class             = "FakerData\\Data\\$lang\\Email";
         $this->data             = new $data_class;
 

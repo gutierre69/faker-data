@@ -8,7 +8,7 @@ class Address extends Common {
     public $address;
     public $data;
 
-    public function __construct($lang = "pt_br"){
+    public function __construct($lang = "en_us"){
         $data_class             = "FakerData\\Data\\$lang\\Address"; 
         $this->data             = new $data_class;
 
@@ -24,7 +24,7 @@ class Address extends Common {
         $data['complement']         = $this->changeChar( $this->data->complement[ $this->random( $this->data->complement ) ] );
         $data['zipcode']            = $this->changeChar( $this->data->zipcode[ $this->random( $this->data->zipcode ) ] );
 
-        $data['complete_address']   = $data['street_prefix']." ".$data['street_name'].", ".$data['number'].($data['complement']!=""?", ".$data['complement']:'').", CEP: ".$data['zipcode'];
+        $data['complete_address']   = $this->replaceTag($this->data->format, $data);
 
         return (object)  $data;
     }

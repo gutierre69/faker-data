@@ -13,7 +13,6 @@ use FakerData\Data\Phone;
 
 class Generate extends Common {
 
-    public $lang = "pt_br";
 
     public $address;
     public $category;
@@ -25,7 +24,8 @@ class Generate extends Common {
 
     public $common;
 
-    public function __construct($lang = "pt_br"){
+    public function __construct($lang = "en_us")
+    {
         $address    = new Address($lang);
         $category   = new Category($lang);
         $content    = new Content($lang);
@@ -41,11 +41,11 @@ class Generate extends Common {
         $this->locale       = $locale->locale;
         $this->person       = $person->person;
         $this->phone        = $phone->phone;
-
-       
+  
     }
 
-    public function __call($method, $attributes){
+    public function __call($method, $attributes)
+    {
         
     }
 

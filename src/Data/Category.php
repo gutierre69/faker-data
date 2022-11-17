@@ -8,7 +8,7 @@ class Category extends Common {
     public $category;
     public $data;
 
-    public function __construct($lang = "pt_br"){
+    public function __construct($lang = "en_us"){
         $data_class             = "FakerData\\Data\\$lang\\Category"; 
         $this->data             = new $data_class;
 

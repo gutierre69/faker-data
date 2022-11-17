@@ -2,7 +2,6 @@
 
 namespace FakerData\Data\pt_br;
 
-
 class Content {
 
     public $blah_sentences = array(

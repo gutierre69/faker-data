@@ -8,10 +8,14 @@ use FakerData\Data\Email;
 
 class Person extends Common {
 
+    public static $default_language = "";
+
     public $person;
     public static $data;
 
-    public function __construct($lang = "pt_br"){
+    public function __construct($lang = "en_us"){
+        self::$default_language  = $lang;
+
         $data_class             = "FakerData\\Data\\$lang\\Person"; 
         self::$data             = new $data_class;
         $this->person           = $this->CompletePerson();
@@ -38,16 +42,16 @@ class Person extends Common {
 
         $data['picture']                 = self::picture($data['gender']);
 
-        $email                           = new Email();
+        $email                           = new Email(self::$default_language);
         $data['email']                   = $email->email->email;
         
-        $locale                          = new Locale();
+        $locale                          = new Locale(self::$default_language);
 
         $data['city']                    = $locale->locale->city;
         $data['state']                   = $locale->locale->state;
         $data['state_initials']          = $locale->locale->state_initials;
 
-        $address                         = new Address();
+        $address                         = new Address(self::$default_language);
 
         $data['street_prefix']           = $address->address->street_prefix;
         $data['street_name']             = $address->address->street_name;
@@ -56,7 +60,7 @@ class Person extends Common {
         $data['zipcode']                 = $address->address->zipcode;
 
         $complete_address                = $address->address->complete_address;
-        $data['complete_address']        = $complete_address.", ".$data['city']." - ".$data['state_initials'];
+        $data['complete_address']        = self::replaceTag(self::$data->address_format, $data);
 
         return (object) $data;
     }
