@@ -8,7 +8,7 @@ require ('document_generator.php');
 class Company 
 {
 
-    public $types           = array("Ltda.", "MEI", "ME", "S.A.");
+    public $types           = array("Ltda.", "MEI", "ME", "S/A", "SLU", "EIRELI", "SS");
 
     public $categories      = array(
         array(
@@ -33,6 +33,11 @@ class Company
     public $formats         = array(
         "{{first_name}} {{last_name}} {{suffix}} {{type}}",
         "{{last_name}} e {{last_name}} {{suffix}} {{type}}",
+        "{{last_name}}-{{last_name}} {{suffix}} {{type}}",
+        "{{last_name}} {{type}}",
+        "{{first_name}} {{type}}",
+        "{{last_name}} {{suffix}}",
+        "{{first_name}} {{suffix}}",
     );
 
     public function generateDocument(){
