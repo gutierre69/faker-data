@@ -4,7 +4,7 @@
  * @link https://github.com/gilbarbara/alfred-workflows/tree/main/cpf-cnpj-generator
 */
 
-namespace FakerData\Data\pt_br;
+namespace FakerData\Data\en_us;
 
 function mod( $dividend, $divider ) {
 	return round( $dividend - ( floor( $dividend / $divider ) * $divider ) );

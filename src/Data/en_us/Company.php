@@ -1,6 +1,6 @@
 <?php 
 
-namespace FakerData\Data\pt_br;
+namespace FakerData\Data\en_us;
 
 require ('document_generator.php');
 
