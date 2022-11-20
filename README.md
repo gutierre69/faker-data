@@ -9,6 +9,7 @@ Persons, pictures, address and phones **ARE FAKE**!
 
 ## Language Support
 pt_br: Portuguese (BRAZIL)
+
 en_us: English (USA)
 
 ## Basic Usage
