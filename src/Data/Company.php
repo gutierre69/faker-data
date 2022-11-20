@@ -3,7 +3,7 @@
 namespace FakerData\Data;
 
 
-class COmpany extends Common {
+class Company extends Common {
 
     public $company;
     public $data;
