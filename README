@@ -1,0 +1,10 @@
+FAKER DATA
+==========
+
+This library written in PHP generates fake data for various uses, including a popular database for system load testing.
+
+For more details and information about installing and using the library, go to:
+
+    https://fakerdata.io
+
+All providers are documented in the address and always updated.
