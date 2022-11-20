@@ -3,7 +3,8 @@
 namespace FakerData\Data\pt_br;
 
 
-class Phone {
+class Phone 
+{
 
     public $country             = array("+55");
 

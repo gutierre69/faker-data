@@ -3,19 +3,22 @@
 namespace FakerData\Data;
 
 
-class Category extends Common {
+class Category extends Common 
+{
 
     public $category;
     public $data;
 
-    public function __construct($lang = "en_us"){
+    public function __construct($lang = "en_us")
+    {
         $data_class             = "FakerData\\Data\\$lang\\Category"; 
         $this->data             = new $data_class;
 
         $this->category         = $this->create();
     }
 
-    public function create(){
+    public function create()
+    {
         $data = array();
 
         $data['title_blah']      = $this->data->blah_titles[ $this->random( $this->data->blah_titles ) ];

@@ -3,7 +3,8 @@
 namespace FakerData\Data\en_us;
 
 
-class Email {
+class Email 
+{
 
     public $email_server            = array("@hotmail.com","@gmail.com","@protonmail.com","@aol.com","@ny.com","@mailgun.com","@us.com");
 

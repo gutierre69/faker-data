@@ -3,7 +3,8 @@
 namespace FakerData\Data;
 
 
-class Common {
+class Common 
+{
 
     public static function random($arr = array())
     {

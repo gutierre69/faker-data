@@ -2,19 +2,22 @@
 
 namespace FakerData\Data;
 
-class Content extends Common {
+class Content extends Common 
+{
 
     public $content;
     public $data;
 
-    public function __construct($lang = "en_us"){
+    public function __construct($lang = "en_us")
+    {
         $data_class             = "FakerData\\Data\\$lang\\Content"; 
         $this->data             = new $data_class;
 
         $this->content          = $this->create(); 
     }
 
-    public function create(){
+    public function create()
+    {
         $data = array();
 
         // title lorem

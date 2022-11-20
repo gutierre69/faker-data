@@ -2,7 +2,8 @@
 
 namespace FakerData\Data\en_us;
 
-class Content {
+class Content 
+{
 
     public $blah_sentences = array(
         array("It must be said that ", "On the other hand, ", "Just like that, ", "However, we cannot forget that ", "In the same way, ", "Everyday practice proves that ", "It is never too much to remember the weight and meaning of these problems, since ", "Accumulated experiences show that ", "Above all, it is essential to emphasize that ", "Encouraging technological advancement, as well as ", "However, ", "All these questions, properly considered, raise doubts as to whether ", "Thinking more in the long term, ", "What we have to keep in mind is that ", "Still, there are doubts as to how ", "I would like to emphasize that ", "Still, ", "On an organizational level, ", "The commitment to analysis ", "We are realizing more and more that ", "In today's world, ", "It is important to question how much ", "In this sense, ", "Evidently ", "Therefore ", "Of course ", "We can already see the way in which ", "In this way, ", "Care in identifying critical points", "The certification of methodologies that help us to deal with "),

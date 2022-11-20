@@ -6,14 +6,15 @@ use FakerData\Data\Locale;
 use FakerData\Data\Address;
 use FakerData\Data\Email;
 
-class Person extends Common {
+class Person extends Common 
+{
 
     public static $default_language = "";
-
     public $person;
     public static $data;
 
-    public function __construct($lang = "en_us"){
+    public function __construct($lang = "en_us")
+    {
         self::$default_language  = $lang;
 
         $data_class             = "FakerData\\Data\\$lang\\Person"; 
@@ -21,7 +22,8 @@ class Person extends Common {
         $this->person           = $this->CompletePerson();
     }
 
-    public static function create($males = 1, $females = 1){
+    public static function create($males = 1, $females = 1)
+    {
         $data = array();
         $data['gender']         = self::gender();
         $data['first_name']     = self::name();
@@ -32,7 +34,8 @@ class Person extends Common {
         return (object) $data;
     }
 
-    public static function CompletePerson($males = 1, $females = 1){
+    public static function CompletePerson($males = 1, $females = 1)
+    {
 
         // create a simple complete name and gender
         $data       = (array) self::create();
@@ -65,18 +68,21 @@ class Person extends Common {
         return (object) $data;
     }
 
-    public static function gender(){
+    public static function gender()
+    {
         $rand_gender = array("male","female");
         return $rand_gender[ rand(0,1) ];
     }
 
-    public static function name(){
+    public static function name()
+    {
         $gender = self::gender()??'male';
         if($gender=="male") return self::$data->male_names[rand(0,self::$data->total_male_names)];
         if($gender=="female") return self::$data->female_names[rand(0,self::$data->total_female_names)];
     }
 
-    public static function middle_name(){
+    public static function middle_name()
+    {
         $gender = self::gender()??'male';
         if(rand(0,5)==3) {
             if($gender=="male") return self::$data->male_names[rand(0,self::$data->total_male_names)];
@@ -84,22 +90,26 @@ class Person extends Common {
         }
     }
 
-    public static function last_name(){
+    public static function last_name()
+    {
         return self::$data->last_names[rand(0,self::$data->total_last_names)];
     }
 
-    public static function complete_name(){
+    public static function complete_name()
+    {
         $name           = self::name();
         $middle_name    = self::middle_name();
         $last_name      = self::last_name();
         return $name." ".($middle_name!=""?$middle_name." ":"").$last_name;
     }
 
-    public static function age(){
+    public static function age()
+    {
         return rand(18,60);
     }
 
-    public static function birthdate($age = 0){
+    public static function birthdate($age = 0)
+    {
         if($age == 0) $age = self::age();
 
         $birth_year     = date("Y")-$age;
@@ -111,7 +121,8 @@ class Person extends Common {
         return $birth_year."-".$birth_month."-".$birth_day;
     }
 
-    public static function picture($gender = ""){
+    public static function picture($gender = "")
+    {
         if($gender=="") $gender = self::gender();
 
         if($gender=="male")      $picture = "male/".self::$data->male_pictures[ rand(0, self::$data->total_male_pictures) ];

@@ -2,7 +2,8 @@
 
 namespace FakerData\Data\pt_br;
 
-class Address {
+class Address 
+{
 
     public $street_prefix           = array("Avenida", "Rua", "Alameda", "Travessa", "Av.", "R.", "Al.", "Tr.");
 

@@ -3,7 +3,8 @@
 namespace FakerData\Data\en_us;
 
 
-class Phone {
+class Phone 
+{
 
     public $country             = array("+1");
 

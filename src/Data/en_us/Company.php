@@ -2,10 +2,9 @@
 
 namespace FakerData\Data\en_us;
 
-require ('document_generator.php');
 
-
-class Company {
+class Company 
+{
 
     public $types           = array("Ltda.", "MEI", "ME", "S.A.");
 
@@ -32,10 +31,11 @@ class Company {
     public $formats         = array(
         "{{first_name}} {{last_name}} {{suffix}} {{type}}",
         "{{last_name}} e {{last_name}} {{suffix}} {{type}}",
+        "{{last_name}} {{suffix}} {{type}}",
     );
 
-    public function generateCNPJ(){
-        return cnpj(false);
+    public function generateDocument(){
+        return "1234";
     }
 
 

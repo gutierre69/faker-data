@@ -5,7 +5,8 @@ namespace FakerData\Data\pt_br;
 require ('document_generator.php');
 
 
-class Company {
+class Company 
+{
 
     public $types           = array("Ltda.", "MEI", "ME", "S.A.");
 
@@ -34,7 +35,7 @@ class Company {
         "{{last_name}} e {{last_name}} {{suffix}} {{type}}",
     );
 
-    public function generateCNPJ(){
+    public function generateDocument(){
         return cnpj(false);
     }
 

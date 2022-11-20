@@ -3,19 +3,22 @@
 namespace FakerData\Data;
 
 
-class Address extends Common {
+class Address extends Common 
+{
 
     public $address;
     public $data;
 
-    public function __construct($lang = "en_us"){
+    public function __construct($lang = "en_us")
+    {
         $data_class             = "FakerData\\Data\\$lang\\Address"; 
         $this->data             = new $data_class;
 
         $this->address          = $this->create();
     }
 
-    public function create(){
+    public function create()
+    {
         $data = array();
 
         $data['street_prefix']      = $this->data->street_prefix[ $this->random( $this->data->street_prefix ) ];

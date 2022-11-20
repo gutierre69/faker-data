@@ -3,19 +3,22 @@
 namespace FakerData\Data;
 
 
-class Email extends Common {
+class Email extends Common 
+{
 
     public $email;
     public $data;
 
-    public function __construct($lang = "en_us"){
+    public function __construct($lang = "en_us")
+    {
         $data_class             = "FakerData\\Data\\$lang\\Email";
         $this->data             = new $data_class;
 
         $this->email         = $this->create();
     }
 
-    public function create(){
+    public function create()
+    {
         $data = array();
 
         $data['email']       = $this->email();
@@ -23,7 +26,8 @@ class Email extends Common {
         return (object)  $data;
     }
 
-    public function email($seed=""){
+    public function email($seed="")
+    {
         $server = $this->data->email_server[ $this->random( $this->data->email_server ) ];
 
         $preffix = "";

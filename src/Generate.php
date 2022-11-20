@@ -12,7 +12,8 @@ use FakerData\Data\Locale;
 use FakerData\Data\Person;
 use FakerData\Data\Phone;
 
-class Generate extends Common {
+class Generate extends Common 
+{
 
 
     public $address;

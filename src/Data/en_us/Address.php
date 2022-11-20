@@ -2,7 +2,8 @@
 
 namespace FakerData\Data\en_us;
 
-class Address {
+class Address 
+{
 
     public $street_prefix           = array("Avenue", "Street");
 

@@ -6,11 +6,13 @@
 
 namespace FakerData\Data\pt_br;
 
-function mod( $dividend, $divider ) {
+function mod( $dividend, $divider ) 
+{
 	return round( $dividend - ( floor( $dividend / $divider ) * $divider ) );
 }
 
-function cpf( $formated = true ) {
+function cpf( $formated = true ) 
+{
 	$n1 = rand( 0, 9 );
 	$n2 = rand( 0, 9 );
 	$n3 = rand( 0, 9 );
@@ -40,7 +42,8 @@ function cpf( $formated = true ) {
 	return $return;
 }
 
-function cnpj( $formated = true ) {
+function cnpj( $formated = true ) 
+{
 	$n1  = rand( 0, 9 );
 	$n2  = rand( 0, 9 );
 	$n3  = rand( 0, 9 );

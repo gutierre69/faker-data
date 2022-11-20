@@ -3,19 +3,22 @@
 namespace FakerData\Data;
 
 
-class Locale extends Common {
+class Locale extends Common 
+{
 
     public $locale;
     public $data;
 
-    public function __construct($lang = "en_us"){
+    public function __construct($lang = "en_us")
+    {
         $data_class             = "FakerData\\Data\\$lang\\Locales"; 
         $this->data             = new $data_class;
 
         $this->locale           = $this->create();
     }
 
-    public function create(){
+    public function create()
+    {
         $data = array();
 
         $city                               = $this->data->cities[ $this->random( $this->data->cities ) ];
