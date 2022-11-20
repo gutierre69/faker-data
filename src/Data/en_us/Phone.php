@@ -16,6 +16,8 @@ class Phone {
 
     public $format_cellphone    = "{{country_code}} ({{area_code}}) {{cellphone}}";
 
+    public $total_area_code     = 0;
+
     public function __construct(){
         $this->total_area_code         = count($this->area_code) - 1;
     }

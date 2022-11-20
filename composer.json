@@ -1,6 +1,14 @@
 {
     "name": "gutierre69/faker-data",
-    "description": "xx",
+    "type": "library",
+    "description": "To generate complete fake data",
+    "license": "MIT",
+    "keywords": [
+        "fake",
+        "data",
+        "generate",
+        "automatic"
+    ],
     "autoload": {
         "psr-4": {
             "FakerData\\": "src/"

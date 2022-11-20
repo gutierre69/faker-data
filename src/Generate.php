@@ -6,6 +6,7 @@ use FakerData\Data\Address;
 use FakerData\Data\Category;
 use FakerData\Data\Common;
 use FakerData\Data\Content;
+use FakerData\Data\Company;
 use FakerData\Data\Email;
 use FakerData\Data\Locale;
 use FakerData\Data\Person;
@@ -21,6 +22,7 @@ class Generate extends Common {
     public $locale;
     public $person;
     public $phone;
+    public $company;
 
     public $common;
 
@@ -33,6 +35,7 @@ class Generate extends Common {
         $locale     = new Locale($lang);
         $person     = new Person($lang);
         $phone      = new Phone($lang);
+        $company    = new Company($lang);
 
         $this->address      = $address->address;
         $this->category     = $category->category;
@@ -41,6 +44,7 @@ class Generate extends Common {
         $this->locale       = $locale->locale;
         $this->person       = $person->person;
         $this->phone        = $phone->phone;
+        $this->company      = $company->company;
   
     }
 

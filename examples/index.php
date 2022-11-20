@@ -9,7 +9,7 @@ use FakerData\Generate;
 use FakerData\Data\Person;
 use FakerData\Data\Phone;
 
-$FakerData = new Generate("en_us");
+$FakerData = new Generate("pt_br");
 // $person = new Person();
 // $phone = new Phone();
 
@@ -34,4 +34,5 @@ echo "<pre><code>". print_r( $FakerData->content, true )."</code></pre>";
 echo "<h4>Email</h4>";
 echo "<pre><code>". print_r( $FakerData->email, true )."</code></pre>";
 
-echo $FakerData->randomElement(['aa','bb']);
+echo "<h4>Company</h4>";
+echo "<pre><code>". print_r( $FakerData->company, true )."</code></pre>";

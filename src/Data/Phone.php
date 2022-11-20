@@ -37,11 +37,11 @@ class Phone extends Common {
     }
 
     public function landline(){
-        return $this->changeChar( $this->data->landline[ $this->random( $this->data->landline ) ] );
+        return $this->replaceChar( $this->data->landline[ $this->random( $this->data->landline ) ] );
     }
 
     public function cellphone(){
-        return $this->changeChar( $this->data->cellphone[ $this->random( $this->data->cellphone ) ] );
+        return $this->replaceChar( $this->data->cellphone[ $this->random( $this->data->cellphone ) ] );
     }
 
 }

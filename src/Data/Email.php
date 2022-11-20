@@ -46,7 +46,7 @@ class Email extends Common {
             if(rand(0,1)==1) $preffix .= "##";
 
         }
-        $preffix = $this->changeChar( $preffix );
+        $preffix = $this->replaceChar( $preffix );
 
         return strtolower($preffix.$server);
     }

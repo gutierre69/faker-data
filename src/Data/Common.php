@@ -15,7 +15,7 @@ class Common {
         return $arr[ rand(0, count($arr)-1) ];
     }
 
-    public static function changeChar($str = "")
+    public static function replaceChar($str = "")
     {
         $letters = array("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","W","Y","Z");
 
@@ -25,6 +25,18 @@ class Common {
         }
 
         return $str;
+    }
+
+    public static function replaceCharFromStringSequence($str_to_replace = "", $str_with_data = ""){
+        $sequence = 0;
+        for($i=0; $i<strlen($str_to_replace); $i++){
+            if($str_to_replace[$i]=="#" || $str_to_replace[$i]=="@"){
+                $str_to_replace[$i] = str_replace("#", $str_with_data[$sequence], $str_to_replace[$i]);
+                $str_to_replace[$i] = str_replace("@", $str_with_data[$sequence], $str_to_replace[$i]);
+                $sequence++;
+            }
+        }
+        return $str_to_replace;
     }
 
     public static function replaceTag($string, $tags, $force_lower = false)
