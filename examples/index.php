@@ -9,7 +9,7 @@ use FakerData\Generate;
 use FakerData\Data\Person;
 use FakerData\Data\Phone;
 
-$FakerData = new Generate("pt_br");
+$FakerData = new Generate("en_us");
 // $person = new Person();
 // $phone = new Phone();
 
